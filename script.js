@@ -15,3 +15,24 @@ function dragStart() {
   this.className += "hold";
   setTimeout(() => (this.className = "invisible"), 0);
 }
+
+function dragEnd() {
+  this.className = "fill";
+}
+
+function dragOver(e) {
+  e.preventDefault();
+}
+
+function dragEnter() {
+  e.preventDefault();
+}
+
+function dragLeave() {
+  this.className = "empty";
+}
+
+function dragDrop() {
+  this.className = "empty";
+  this.append(fill);
+}
