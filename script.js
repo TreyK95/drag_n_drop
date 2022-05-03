@@ -1,8 +1,8 @@
 const fill = document.querySelector(".fill");
 const empties = document.querySelectorAll(".empty");
 
-fill.addEventListener("dragstart", dragstart);
-fill.addEventListener(".dragend", dragend);
+fill.addEventListener("dragstart", dragStart);
+fill.addEventListener("dragend", dragEnd);
 
 for (const empty of empties) {
   empty.addEventListener("dragover", dragOver);
@@ -24,8 +24,9 @@ function dragOver(e) {
   e.preventDefault();
 }
 
-function dragEnter() {
+function dragEnter(e) {
   e.preventDefault();
+  this.className += "hovered";
 }
 
 function dragLeave() {
